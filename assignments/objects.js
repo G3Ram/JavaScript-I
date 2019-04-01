@@ -19,35 +19,35 @@ const example = {
 
 // Write your intern objects here:
 
-var intern1 = {
+const intern1 = {
   id: 1,
   name: "Mitzi",
   email: "mmelloy0@psu.edu",
   gender: "F"
 };
 
-var intern2 = {
+const intern2 = {
   id: 2,
   name: "Kennan",
   email: "kdiben1@tinypic.com",
   gender: "M"
 };
 
-var intern3 = {
+const intern3 = {
   id: 3,
   name: "Keven",
   email: "kmummery2@wikimedia.org",
   gender: "M"
 };
 
-var intern4 = {
+const intern4 = {
   id: 4,
   name: "Gannie",
   email: "gmartinson3@illinois.edu",
   gender: "M"
 };
 
-var intern5 = {
+const intern5 = {
   id: 5,
   name: "Antonietta",
   email: "adaine5@samsung.com",
@@ -127,6 +127,8 @@ const parent = {
     }
   }
 };
+
+// Following is another way of creating functions within an object
 
 /*parent.speak = function() {
   console.log(this.name);
