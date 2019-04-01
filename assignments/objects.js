@@ -58,19 +58,19 @@ var intern5 = {
 // Once your objects are created, log out the following requests from HR into the console:
 
 // Mitzi's name
-console.log(intern1.name);
+console.log("\n Mitzi's name is ----> " + intern1.name);
 
 // Kennan's ID
-console.log(intern2.id);
+console.log("\n Kennan's ID is ----> " + intern2.id);
 
 // Keven's email
-console.log(intern3.email);
+console.log("\n Keven's email is ----> " + intern3.email);
 
 // Gannie's name
-console.log(intern4.name);
+console.log("\n Gannie's name is ----> " + intern4.name);
 
 // Antonietta's Gender
-console.log(intern5.gender);
+console.log("\n Antonietta's gender is ----> " + intern5.gender);
 
 // ==== Challenge 3: Object Methods ====
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
@@ -78,13 +78,14 @@ console.log(intern5.gender);
 intern2.speak = function() {
   console.log("Hello,my name is Kennan!");
 };
+console.log("Invoking intern2.speak() -------------> \n");
 intern2.speak();
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
 intern5.multiplyNums = function(num1, num2) {
   console.log(
-    "Result of multiplying the two numbers " +
+    "\nResult of multiplying the two numbers " +
       num1 +
       "and " +
       num2 +
@@ -106,23 +107,28 @@ intern5.multiplyNums(3, 4);
 const parent = {
   name: "Susan",
   age: 70,
+  speak: function() {
+    console.log("\n:: Parent speak():: Parent's name is " + this.name);
+  },
   child: {
     name: "George",
     age: 50,
-    /*speak = function(){
-      console.log(this.name);
-    },*/
+    speak: function() {
+      console.log("\n:: Child speak():: Child's name is " + this.name);
+    },
     grandchild: {
       name: "Sam",
-      age: 30
-      /*speak =  function(){
-        console.log(this.name);
-      }*/
+      age: 30,
+      speak: function() {
+        console.log(
+          "\n:: Grandchild speak():: Grandchild's name is " + this.name
+        );
+      }
     }
   }
 };
 
-parent.speak = function() {
+/*parent.speak = function() {
   console.log(this.name);
 };
 
@@ -132,17 +138,17 @@ parent.child.speak = function() {
 
 parent.child.grandchild.speak = function() {
   console.log(this.name);
-};
+};*/
 
 // Log the parent object's name
-console.log(parent.name);
+console.log("\n The parent object's name is " + parent.name);
 
 // Log the child's age
-console.log(parent.child.age);
+console.log("\n The child's age is " + parent.child.age);
 
 // Log the name and age of the grandchild
-parent.child.grandchild.speak();
-console.log(parent.child.grandchild.age);
+console.log("\n The grandchild's name is " + parent.child.grandchild.name);
+console.log("\n The grandchild's age is " + parent.child.grandchild.age);
 
 // Have the parent speak
 parent.speak();
